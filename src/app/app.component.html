@@ -1,8 +1,19 @@
 <app-header></app-header>
 <main class="main">
   <ul id="users">
-    <li><app-user></app-user></li>
+    @for (user of users; track user.id) {
+    <li>
+      <app-user [user]="user" (select)="onSelectedUser($event)"></app-user>
+    </li>
+    }
   </ul>
+  <div>
+    @if (selectedUser) {
+    <app-tasks [name]="selectedUser"></app-tasks>
+    }@else {
+    <p>Please select a user</p>
+    }
+  </div>
 </main>
 
 <router-outlet />
