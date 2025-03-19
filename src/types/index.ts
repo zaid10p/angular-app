@@ -11,3 +11,9 @@ export type Task = {
   userId: string;
   dueDate: string;
 };
+
+export type TaskData = {
+  title: string;
+  summary: string;
+  date: string;
+};

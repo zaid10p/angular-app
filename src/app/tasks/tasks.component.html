@@ -1,20 +1,20 @@
 <div>
   @if (isAddingTask) {
-  <app-new-task (cancel)="onCancelDialog()"></app-new-task>
+  <app-new-task (close)="onCloseDialog()" [userId]="user.id"></app-new-task>
   }
 </div>
-<section>
+<section id="tasks">
   <header>
     <h2>{{ user.name + " Tasks" }}</h2>
     <menu>
-      <button (click)="onAddTask()">Add Tasks</button>
+      <button (click)="onAddClick()">Add Tasks</button>
     </menu>
   </header>
   <ul>
+    @for (task of userTasks; track $index) {
     <li>
-      @for (task of userTasks; track $index) {
-      <app-task [task]="task" (completed)="onTaskCompleted($event)"></app-task>
-      }
+      <app-task [task]="task"></app-task>
     </li>
+    }
   </ul>
 </section>
