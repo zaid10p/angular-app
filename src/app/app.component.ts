@@ -4,6 +4,8 @@ import { HeaderComponent } from './header/header.component';
 import { UserComponent } from './user/user.component';
 import { DUMMY_USERS } from './userdata';
 import { TasksComponent } from './tasks/tasks.component';
+import { User } from '../types';
+// import { NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -13,10 +15,9 @@ import { TasksComponent } from './tasks/tasks.component';
 })
 export class AppComponent {
   users = DUMMY_USERS;
-  selectedUser?: string;
+  selectedUser?: User;
 
   onSelectedUser(user: any) {
-    console.log('User selected:', user);
-    this.selectedUser = user.name;
+    this.selectedUser = user;
   }
 }
