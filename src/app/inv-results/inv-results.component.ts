@@ -1,10 +1,9 @@
 import { Component, computed } from '@angular/core';
-import { CurrencyPipe } from '@angular/common';
 import { InvestmentService } from '../investment.service';
 
 @Component({
   selector: 'app-inv-results',
-  imports: [CurrencyPipe],
+  standalone: false,
   templateUrl: './inv-results.component.html',
   styleUrl: './inv-results.component.css',
 })
