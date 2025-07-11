@@ -4,10 +4,11 @@ import { TaskData, User } from '../../types';
 import { DummyTasks } from '../userdata';
 import { NewTaskComponent } from './new-task/new-task.component';
 import { TasksService } from './tasks.service';
+import { UserstatusComponent } from "../userstatus/userstatus.component";
 
 @Component({
   selector: 'app-tasks',
-  imports: [TaskComponent, NewTaskComponent],
+  imports: [TaskComponent, NewTaskComponent, UserstatusComponent],
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.css',
 })

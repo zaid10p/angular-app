@@ -1,0 +1,13 @@
+<div
+  [class]="{
+    status: true,
+    'status-online': status === 'online',
+    'status-offline':status === 'offline',
+}"
+>
+  @if (status === "online") {
+  <p>Status: Online</p>
+  }@else {
+  <p>Status: Offline</p>
+  }
+</div>
