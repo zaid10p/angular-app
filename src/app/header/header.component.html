@@ -1,5 +1,12 @@
 <header>
   <img src="assets/task-logo.png" alt="Task Management" />
   <h1>Task Management</h1>
-  <p>Description</p>
+  <a href="https://angular.dev" target="_blank" appSafelink="abcd">
+    Angular docs
+  </a>
+  <p *appAuth="'admin'">This is only visible to admin users.</p>
+  <p *appAuth="'guest'">
+    Guest user
+    <button (click)="onGuestButtonClick()">Change to Admin</button>
+  </p>
 </header>

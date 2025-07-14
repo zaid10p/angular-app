@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserstatusComponent implements OnInit {
   status = 'online';
-  private intervalId?: NodeJS.Timeout;
+  private intervalId?: any;
 
   ngOnInit() {
     // Simulate a status change after 3 seconds
