@@ -1,0 +1,9 @@
+<div class="todobox">
+  <h2>Todos</h2>
+  <ul>
+    @for (todo of todos(); track todo.id) {
+    <li>{{ todo.title }} - {{ todo.completed ? "Completed" : "Pending" }}</li>
+    }
+  </ul>
+  <button (click)="addSampleTodo()">Add Todo</button>
+</div>

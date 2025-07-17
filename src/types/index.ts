@@ -1,19 +1,5 @@
-export type User = {
-  id: string;
-  name: string;
-  avatar: string;
-};
-
-export type Task = {
+export type Todo = {
   id: string;
   title: string;
-  summary: string;
-  userId: string;
-  dueDate: string;
-};
-
-export type TaskData = {
-  title: string;
-  summary: string;
-  date: string;
+  completed: boolean;
 };
