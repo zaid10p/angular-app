@@ -172,3 +172,14 @@ hr {
   background-color: transparent;
   color: #869999;
 }
+
+/* styles.css */
+.signup-link {
+  color: #c0c7e6;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  color: #b681f3;
+  text-decoration: underline;
+}
